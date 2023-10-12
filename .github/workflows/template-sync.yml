@@ -12,6 +12,11 @@ jobs:
       # To use this repository's private action, you must check out the repository
       - name: Checkout
         uses: actions/checkout@v3
+      - name: set private key
+        uses: webfactory/ssh-agent@v0.5.4
+        with:
+          ssh-private-key: |
+            ${{ secrets.TARGET_REPO_SSH_PRIVATE_KEY }}
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v1.1.3
         with:
