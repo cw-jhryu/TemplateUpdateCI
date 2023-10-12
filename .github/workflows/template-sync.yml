@@ -26,3 +26,4 @@ jobs:
           source_repo_path: ${{ secrets.SOURCE_REPO_PATH }} 
           upstream_branch: ${{ secrets.TARGET_BRANCH }} 
           source_repo_ssh_private_key: ${{ secrets.SOURCE_REPO_SSH_PRIVATE_KEY }} 
+          hostname: "template"
