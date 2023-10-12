@@ -17,6 +17,8 @@ jobs:
         with:
           ssh-private-key: |
             ${{ secrets.TARGET_REPO_SSH_PRIVATE_KEY }}
+      - name: http to ssh
+        run: git config --global url."git@github.com:".insteadOf "https://github.com/"      
       - name: actions-template-sync
         uses: AndreasAugustin/actions-template-sync@v1.1.3
         with:
